@@ -6,9 +6,14 @@ function Comments() {
      }
 
     return (
-            <div>
-                <button className="next" onClick={handleNext}>Next</button>
-            </div>
+        <>
+        <form>
+            <h2>Any comments you want to leave?</h2>
+            <p>Comments?</p>
+            <hidden className="input" type="text" />
+            <button className="next" onClick={handleNext}>Next</button>
+        </form>
+    </>
      )
 }
 
