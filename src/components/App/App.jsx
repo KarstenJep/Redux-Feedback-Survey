@@ -5,7 +5,7 @@ import Content from '../Content/Content'
 import Supported from '../Supported/Supported';
 import Review from '../Review/Review';
 import Submission from '../Submission/Submission';
-
+import { HashRouter as Router, Route} from "react-router-dom";
 import './App.css';
 import { Router } from 'express';
 

@@ -1,6 +1,8 @@
 function Feeling() {
     return (
-
+<div>
+    <button className="next" onClick={handleNext}>Next</button>
+</div>
     )
 }
 
