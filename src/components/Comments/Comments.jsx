@@ -1,9 +1,9 @@
 function Comments() {
 
     const handleNext = () => {
-        
-        history.push('/');
-    }
+        console.log('Clicked next');
+         history.push('/Review');
+     }
 
     return (
             <div>
