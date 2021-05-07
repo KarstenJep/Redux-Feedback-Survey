@@ -6,9 +6,14 @@ function Supported() {
      }
 
     return (
-            <div>
-                <button className="next" onClick={handleNext}>Next</button>
-            </div>
+        <>
+        <form>
+            <h2>How well are you being supported?</h2>
+            <p>Support?</p>
+            <hidden className="input" type="number" />
+            <button className="next" onClick={handleNext}>Next</button>
+        </form>
+    </>
     )
 }
 
