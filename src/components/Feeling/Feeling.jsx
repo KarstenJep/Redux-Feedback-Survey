@@ -6,9 +6,14 @@ function Feeling() {
     }
 
     return (
-<div>
-    <button className="next" onClick={handleNext}>Next</button>
-</div>
+        <>
+            <form>
+                <h2>How are you feeling today?</h2>
+                <p>Feeling?</p>
+                <hidden className="input" type="number" />
+                <button className="next" onClick={handleNext}>Next</button>
+            </form>
+        </>
     )
 }
 
