@@ -1,17 +1,29 @@
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+
 function Comments() {
 
-    const handleNext = () => {
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const [comments, setComments] = useState('');
+
+    const handleNext = (event) => {
+        event.preventDefault();
         console.log('Clicked next');
+        dispatch( {type: 'COMMENTS', payload: comments});
          history.push('/Review');
+         // setFeeling('');
      }
 
     return (
         <>
-        <form>
+        <form className="form" onSubmit={handleNext}>
             <h2>Any comments you want to leave?</h2>
             <p>Comments?</p>
-            <hidden className="input" type="text" />
-            <button className="next" onClick={handleNext}>Next</button>
+            <input className="input" type="text" value={comments} 
+                    onChange={(event) => setComments(event.target.value)}/>
+            <button className="next" type="submit">Next</button>
         </form>
     </>
      )

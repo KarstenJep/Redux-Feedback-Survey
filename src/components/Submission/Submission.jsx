@@ -1,4 +1,8 @@
+import { useHistory } from 'react-router-dom';
+
 function Submission() {
+
+    const history = useHistory();
 
     const handleNext = () => {
         alert('Survey resetting... one moment please.')

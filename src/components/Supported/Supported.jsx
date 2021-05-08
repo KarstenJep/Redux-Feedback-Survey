@@ -1,17 +1,29 @@
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+
 function Supported() {
 
-    const handleNext = () => {
-        console.log('Clicked next');
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const [supported, setSupported] = useState('')
+
+    const handleNext = (event) => {
+        event.preventDefault();
+        console.log('Clicked next', supported);
+        dispatch( {type: 'SUPPORTED', payload: supported});
          history.push('/Comments');
+         // setFeeling('');
      }
 
     return (
         <>
-        <form>
+        <form className="form" onSubmit={handleNext}>
             <h2>How well are you being supported?</h2>
             <p>Support?</p>
-            <hidden className="input" type="number" />
-            <button className="next" onClick={handleNext}>Next</button>
+            <input className="input" type="number" value={supported} 
+                    onChange={(event) => setSupported(event.target.value)}/>
+                <button className="next" type="submit">Next</button>
         </form>
     </>
     )

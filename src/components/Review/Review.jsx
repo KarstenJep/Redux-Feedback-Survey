@@ -1,4 +1,8 @@
+import { useHistory } from 'react-router-dom';
+
 function Review() {
+
+    const history = useHistory();
 
     const handleNext = () => {
         alert('Survey Complete!')

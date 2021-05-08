@@ -7,7 +7,8 @@ import Review from '../Review/Review';
 import Submission from '../Submission/Submission';
 import { HashRouter as Router, Route} from "react-router-dom";
 import './App.css';
-import { Router } from 'express';
+
+
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <Router>
-        <Route path="/">
+        <Route path="/" exact>
           <Feeling />
         </Route>
         <Route path="/Content">
