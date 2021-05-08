@@ -1,8 +1,9 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Feeling from '../Feeling/Feeling'
 import Content from '../Content/Content'
 import Supported from '../Supported/Supported';
+import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import Submission from '../Submission/Submission';
 import { HashRouter as Router, Route} from "react-router-dom";
@@ -22,11 +23,14 @@ function App() {
         <Route path="/" exact>
           <Feeling />
         </Route>
-        <Route path="/Content">
+        <Route path="/content">
           <Content />
         </Route>
-        <Route path="/Supported">
+        <Route path="/supported">
           <Supported />
+        </Route>
+        <Route path="/comments">
+          <Comments />
         </Route>
         <Route path="/Review">
           <Review />

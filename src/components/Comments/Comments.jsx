@@ -11,9 +11,9 @@ function Comments() {
     const handleNext = (event) => {
         event.preventDefault();
         console.log('Clicked next');
-        dispatch( {type: 'COMMENTS', payload: comments});
-         history.push('/Review');
-         // setFeeling('');
+        dispatch( {type: 'COMMENTS', payload: {comments: comments}});
+        history.push('/Review');
+        setComments('');
      }
 
     return (
@@ -26,7 +26,7 @@ function Comments() {
             <button className="next" type="submit">Next</button>
         </form>
     </>
-     )
+    )
 }
 
 export default Comments;

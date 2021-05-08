@@ -12,8 +12,8 @@ function Content() {
         event.preventDefault();
         console.log('Clicked next', content);
         dispatch( {type: 'CONTENT', payload: {content: content}});
-         history.push('/Supported');
-          // setFeeling('');
+        history.push('/Supported');
+        setContent('');
      }
 
     return (

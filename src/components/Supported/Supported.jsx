@@ -11,9 +11,9 @@ function Supported() {
     const handleNext = (event) => {
         event.preventDefault();
         console.log('Clicked next', supported);
-        dispatch( {type: 'SUPPORTED', payload: supported});
-         history.push('/Comments');
-         // setFeeling('');
+        dispatch( {type: 'SUPPORTED', payload: {supported: supported}});
+        history.push('/Comments');
+        setSupported('');
      }
 
     return (
@@ -23,7 +23,7 @@ function Supported() {
             <p>Support?</p>
             <input className="input" type="number" value={supported} 
                     onChange={(event) => setSupported(event.target.value)}/>
-                <button className="next" type="submit">Next</button>
+            <button className="next" type="submit">Next</button>
         </form>
     </>
     )

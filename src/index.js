@@ -8,23 +8,23 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 
-const FeelingReducer = (state={}, action) => {
+const feelingReducer = (state={}, action) => {
     console.log('In feeling reducer', state, action.payload);
     if (action.type === 'FEELING') {
-        return {...state, ...action.payload}
+        return action.payload
     }
     return state
 }
 
-const contentReducer = (state=0, action) => {
+const contentReducer = (state={}, action) => {
     console.log('In content reducer', state, action.payload);
     if (action.type === 'CONTENT') {
-        return  [state, action.payload]
+        return  action.payload
     }
     return state
 }
 
-const supportedReducer = (state=0, action) => {
+const supportedReducer = (state={}, action) => {
     console.log('In support reducer', state, action.payload);
     if (action.type === 'SUPPORTED') {
         return action.payload
@@ -44,7 +44,7 @@ const commentsReducer = (state=[], action) => {
 
 const store = createStore(
     combineReducers({
-        FeelingReducer,
+        feelingReducer,
         contentReducer,
         supportedReducer,
         commentsReducer

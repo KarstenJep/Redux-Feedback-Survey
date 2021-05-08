@@ -1,8 +1,14 @@
 import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 function Review() {
 
     const history = useHistory();
+    const feelings = useSelector(store => store.feelingsReducer)
+    const content = useSelector(store => store.contentReducer)
+    const supported = useSelector(store => store.supportedReducer)
+    const comments = useSelector(store => store.commentsReducer)
 
     const handleNext = () => {
         alert('Survey Complete!')
@@ -13,15 +19,14 @@ function Review() {
         //                             understanding: understanding, 
         //                             support: support,
         //                             comments: comments,
-        //                             flagged: flagged })
+        //                              })
         //     .then( (response) => {
         //         console.log(response);
         //     })
         //     .catch(function (error) {
         //         console.log(error);
-        //     });    
-        history.push('/Submission');
-
+        //     });   
+            history.push('/Submission'); 
     }
 
     return (
@@ -30,10 +35,10 @@ function Review() {
             <h2>Review Your Feedback</h2>
         </div>
         <form>
-            <p>Feelings: {feelings}</p>
-            <p>Understanding: {Understanding}</p>
-            <p>Support: {Support}</p>
-            <p>Comments: {Comments}</p>
+            <p>Feelings: {feelings.feelings}</p>
+            <p>Content: {content.content}</p>
+            <p>Support: {supported.supported}</p>
+            <p>Comments: {comments.comments}</p>
             <button className="next" onClick={handleNext}>Submit</button>
         </form>
     </>

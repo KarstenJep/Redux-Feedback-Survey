@@ -11,9 +11,13 @@ function Feeling() {
     const handleNext = (event) => {
         event.preventDefault();
         console.log('Clicked next', feeling);
-        dispatch( {type: 'FEELING', payload: {feeling: feeling}});
-        history.push('/Content');
-        setFeeling('');
+        if (feeling === '') {
+            alert('Please enter a value from 1-5 before continuing!')
+        } else {
+            dispatch( {type: 'FEELING', payload: {feeling: feeling}});
+            history.push('/content');
+            setFeeling('');
+        } 
     }
 console.log('jsx', feeling);
     return (
