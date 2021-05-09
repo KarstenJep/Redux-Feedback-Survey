@@ -14,12 +14,12 @@ function Feeling() {
         if (feeling === '') {
             alert('Please enter a value from 1-5 before continuing!')
         } else {
-            dispatch( {type: 'FEELING', payload: {feeling: feeling}});
-            history.push('/content');
+            dispatch( {type:'FEELING', payload: {feeling: feeling}});
+            history.push('/Content');
             setFeeling('');
         } 
     }
-console.log('jsx', feeling);
+//console.log('jsx', feeling);
     return (
         <>
             <form className="form" onSubmit={handleNext}>

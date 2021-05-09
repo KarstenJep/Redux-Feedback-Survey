@@ -9,23 +9,23 @@ import logger from 'redux-logger';
 
 
 const feelingReducer = (state={}, action) => {
-    console.log('In feeling reducer', state, action.payload);
+    console.log('In feeling reducer');
     if (action.type === 'FEELING') {
-        return action.payload
-    }
-    return state
-}
-
-const contentReducer = (state={}, action) => {
-    console.log('In content reducer', state, action.payload);
-    if (action.type === 'CONTENT') {
         return  action.payload
     }
     return state
 }
 
+const contentReducer = (state={}, action) => {
+    console.log('In content reducer');
+    if (action.type === 'CONTENT') {
+        return state, action.payload
+    }
+    return state
+}
+
 const supportedReducer = (state={}, action) => {
-    console.log('In support reducer', state, action.payload);
+    console.log('In support reducer');
     if (action.type === 'SUPPORTED') {
         return action.payload
     }
