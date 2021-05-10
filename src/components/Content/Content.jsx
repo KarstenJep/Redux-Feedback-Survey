@@ -14,9 +14,10 @@ function Content() {
         if (content === '') {
             alert('Please enter a value from 1-5 before continuing!')
         } else {
-        dispatch( {type: 'CONTENT', payload: {content: content}});
+        dispatch( {type: 'CONTENT', payload: content});
         history.push('/Supported');
         setContent('');
+        }
      }
 
     return (

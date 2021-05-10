@@ -14,9 +14,10 @@ function Supported() {
         if (supported === '') {
             alert('Please enter a value from 1-5 before continuing!')
         } else {
-        dispatch( {type: 'SUPPORTED', payload: {supported: supported}});
-        history.push('/Comments');
+        dispatch( {type: 'SUPPORTED', payload: supported});
+        history.push('/comments');
         setSupported('');
+        }
      }
 
     return (

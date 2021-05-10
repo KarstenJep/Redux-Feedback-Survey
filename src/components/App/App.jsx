@@ -23,16 +23,16 @@ function App() {
         <Route path="/" exact>
           <Feeling />
         </Route>
-        <Route path="/Content" exact>
+        <Route path="/content" exact>
           <Content />
         </Route>
-        <Route path="/Supported" exact>
+        <Route path="/supported" exact>
           <Supported />
         </Route>
-        <Route path="/comments">
+        <Route path="/comments" exact>
           <Comments />
         </Route>
-         <Route path="/Review">
+         <Route path="/review" exact>
           <Review />
         </Route>
         {/* <Route path="/Submission">

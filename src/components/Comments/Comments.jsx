@@ -14,9 +14,10 @@ function Comments() {
         if (comments === '') {
             alert('Please enter a comment before continuing!')
         } else {
-        dispatch( {type: 'COMMENTS', payload: {comments: comments}});
-        history.push('/Review');
+        dispatch( {type: 'COMMENTS', payload: comments});
+        history.push('/review');
         setComments('');
+        }
      }
 
     return (

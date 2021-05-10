@@ -5,14 +5,12 @@ import { useSelector } from 'react-redux';
 function Review() {
 
     const history = useHistory();
-    const feelings = useSelector(store => store.feelingsReducer);
-    const content = useSelector(store => store.contentReducer);
-    const supported = useSelector(store => store.supportedReducer);
-    const comments = useSelector(store => store.commentsReducer);
+    const review = useSelector(store => store);
+    console.log(review);
 
     const handleNext = () => {
         alert('Survey Complete!')  
-        history.push('/Submission'); 
+        history.push('/submission'); 
     }
 
     return (
@@ -21,10 +19,10 @@ function Review() {
             <h2>Review Your Feedback</h2>
         </div>
         <form>
-            <p>Feelings: {feelings.feelings}</p>
-            <p>Content: {content.content}</p>
-            <p>Support: {supported.supported}</p>
-            <p>Comments: {comments.comments}</p>
+            <p>Feelings: {review.feelingReducer}</p>
+            <p>Content: {review.contentReducer}</p>
+            <p>Support: {review.supportedReducer}</p>
+            <p>Comments: {review.commentsReducer}</p>
             <button className="next" onClick={handleNext}>Submit</button>
         </form>
     </>
