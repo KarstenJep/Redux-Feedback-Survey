@@ -1,11 +1,11 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import Feeling from '../Feeling/Feeling';
 import Content from '../Content/Content';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
-// import Submission from '../Submission/Submission';
+import Submission from '../Submission/Submission';
 import { HashRouter as Router, Route} from "react-router-dom";
 import './App.css';
 
@@ -35,9 +35,9 @@ function App() {
          <Route path="/review" exact>
           <Review />
         </Route>
-        {/* <Route path="/Submission">
+        <Route path="/submission">
           <Submission />
-        </Route> */}
+        </Route>
       </Router> 
     </div>
   );
