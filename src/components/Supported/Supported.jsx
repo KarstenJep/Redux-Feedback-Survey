@@ -11,6 +11,9 @@ function Supported() {
     const handleNext = (event) => {
         event.preventDefault();
         console.log('Clicked next', supported);
+        if (supported === '') {
+            alert('Please enter a value from 1-5 before continuing!')
+        } else {
         dispatch( {type: 'SUPPORTED', payload: {supported: supported}});
         history.push('/Comments');
         setSupported('');

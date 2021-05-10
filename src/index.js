@@ -33,7 +33,7 @@ const supportedReducer = (state={}, action) => {
 }
 
 const commentsReducer = (state=[], action) => {
-    console.log('In comment reducer', state, action.payload);
+    console.log('In comment reducer', action.payload);
     if (action.type === 'COMMENTS') {
         return action.payload
     }

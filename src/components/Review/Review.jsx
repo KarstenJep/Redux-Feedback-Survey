@@ -1,32 +1,18 @@
 import { useHistory } from 'react-router-dom';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 function Review() {
 
     const history = useHistory();
-    const feelings = useSelector(store => store.feelingsReducer)
-    const content = useSelector(store => store.contentReducer)
-    const supported = useSelector(store => store.supportedReducer)
-    const comments = useSelector(store => store.commentsReducer)
+    const feelings = useSelector(store => store.feelingsReducer);
+    const content = useSelector(store => store.contentReducer);
+    const supported = useSelector(store => store.supportedReducer);
+    const comments = useSelector(store => store.commentsReducer);
 
     const handleNext = () => {
-        alert('Survey Complete!')
-        // axio POST
-         // // TODO - Reset survey data
-        // axios.post(`/feedback`, {
-        //                             feeling: feeling, 
-        //                             understanding: understanding, 
-        //                             support: support,
-        //                             comments: comments,
-        //                              })
-        //     .then( (response) => {
-        //         console.log(response);
-        //     })
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     });   
-            history.push('/Submission'); 
+        alert('Survey Complete!')  
+        history.push('/Submission'); 
     }
 
     return (

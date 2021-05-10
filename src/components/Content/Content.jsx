@@ -11,6 +11,9 @@ function Content() {
     const handleNext = (event) => {
         event.preventDefault();
         console.log('Clicked next', content);
+        if (content === '') {
+            alert('Please enter a value from 1-5 before continuing!')
+        } else {
         dispatch( {type: 'CONTENT', payload: {content: content}});
         history.push('/Supported');
         setContent('');
