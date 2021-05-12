@@ -11,7 +11,7 @@ function Feeling() {
     const handleNext = (event) => {
         event.preventDefault();
         console.log('Clicked next', feeling);
-        if (feeling === '') {
+        if (feeling < 1 || feeling > 5) {
             alert('Please enter a value from 1-5 before continuing!')
         } else {
             dispatch( {type:'FEELING', payload: feeling});
