@@ -6,7 +6,7 @@ function Supported() {
 
     const dispatch = useDispatch();
     const history = useHistory();
-    const [supported, setSupported] = useState('')
+    const [supported, setSupported] = useState(0);
 
     const handleNext = (event) => {
         event.preventDefault();

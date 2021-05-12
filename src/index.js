@@ -12,6 +12,8 @@ const feelingReducer = (state=0, action) => {
     console.log('In feeling reducer');
     if (action.type === 'FEELING') {
         return  action.payload
+    } else if (action.type === 'CLEAR') {
+        return state
     }
     return state
 }
@@ -20,6 +22,8 @@ const contentReducer = (state=0, action) => {
     console.log('In content reducer');
     if (action.type === 'CONTENT') {
         return action.payload
+    } else if (action.type === 'CLEAR') {
+        return state
     }
     return state
 }
@@ -28,6 +32,8 @@ const supportedReducer = (state=0, action) => {
     console.log('In support reducer');
     if (action.type === 'SUPPORTED') {
         return action.payload
+    } else if (action.type === 'CLEAR') {
+        return state
     }
     return state
 }
@@ -36,6 +42,8 @@ const commentsReducer = (state='', action) => {
     console.log('In comment reducer', action.payload);
     if (action.type === 'COMMENTS') {
         return action.payload
+    } else if (action.type === 'CLEAR') {
+        return state
     }
     return state
 }

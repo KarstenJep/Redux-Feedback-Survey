@@ -6,7 +6,7 @@ function Feeling() {
 
     const dispatch = useDispatch();
     const history = useHistory();
-    const [feeling, setFeeling] = useState('');
+    const [feeling, setFeeling] = useState(0);
 
     const handleNext = (event) => {
         event.preventDefault();
@@ -16,7 +16,7 @@ function Feeling() {
         } else {
             dispatch( {type:'FEELING', payload: feeling});
             history.push('/content');
-            setFeeling('');
+            setFeeling(0);
         } 
     }
 

@@ -25,7 +25,7 @@ function Comments() {
         <form className="form" onSubmit={handleNext}>
             <h2>Any comments you want to leave?</h2>
             <p>Comments?</p>
-            <input className="input" type="text" value={comments} 
+            <input className="input" type="text" placeholder="Leave Comment Here" value={comments} 
                     onChange={(event) => setComments(event.target.value)}/>
             <button className="next" type="submit">Next</button>
         </form>

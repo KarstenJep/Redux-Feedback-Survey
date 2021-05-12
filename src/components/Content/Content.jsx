@@ -6,7 +6,7 @@ function Content() {
 
     const dispatch = useDispatch();
     const history = useHistory();
-    const [content, setContent] = useState('')
+    const [content, setContent] = useState(0);
     
     const handleNext = (event) => {
         event.preventDefault();
@@ -16,7 +16,7 @@ function Content() {
         } else {
         dispatch( {type: 'CONTENT', payload: content});
         history.push('/Supported');
-        setContent('');
+        setContent(0);
         }
      }
 
@@ -25,7 +25,7 @@ function Content() {
             <form className="form" onSubmit={handleNext}>
                 <h2>How well are you understanding the content?</h2>
                 <p>Understanding?</p>
-                <input className="input" type="number" value={content} 
+                <input className="input" type="number" placeholder="Enter 1 - 5" value={content} 
                     onChange={(event) => setContent(event.target.value)}/>
                 <button className="next" type="submit">Next</button>
             </form>
