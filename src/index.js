@@ -19,7 +19,7 @@ const feelingReducer = (state=0, action) => {
 const contentReducer = (state=0, action) => {
     console.log('In content reducer');
     if (action.type === 'CONTENT') {
-        return state, action.payload
+        return action.payload
     }
     return state
 }

@@ -12,7 +12,7 @@ function Submission() {
     return (
         <>
             <div>
-                <p><h2>Feedback!</h2></p>
+                <h2>Feedback!</h2>
             </div>
              <div>
                 <p><h2>Thank You!</h2></p>
